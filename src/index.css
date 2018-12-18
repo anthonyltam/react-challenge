@@ -23,3 +23,15 @@ table.table {
 header {
   margin-bottom: 20px;
 }
+
+.flexed-table {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .table-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+} */

@@ -32,7 +32,7 @@ export default class Table extends Component {
 	}
 
 	render() {	
-		console.log('state',this.state.users);
+		// console.log('state',this.state.users);
 		return (<div>
 			<table className="table table-striped">
 				<thead>
@@ -44,9 +44,11 @@ export default class Table extends Component {
 					</tr>
 				</thead>
 				<tbody>
-					{this.state.users.map( data => {
-						return <Person person={data}></Person>;
-					})}
+					<tr>
+						{this.state.users.map( data => {
+							return <Person person={data}></Person>;
+						})}
+					</tr>
 				</tbody>
 			</table>
 		</div>)
