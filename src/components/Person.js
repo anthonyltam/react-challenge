@@ -3,7 +3,6 @@ import React from 'react';
 class Person extends React.Component {
   
   render() {
-    // console.log('person props', this.props);
     return <div className="flexed-table">
         <div className="age">{this.props.person.age}</div>
         <div className="name">{this.props.person.name}</div>
