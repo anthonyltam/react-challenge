@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {usersJSON} from '../data';
+import Person from './Person';
 
 export default class Table extends Component {
 	constructor(props) {
@@ -30,8 +31,8 @@ export default class Table extends Component {
 		
 	}
 
-	render() {
- 
+	render() {	
+		console.log('state',this.state.users);
 		return (<div>
 			<table className="table table-striped">
 				<thead>
@@ -42,7 +43,11 @@ export default class Table extends Component {
 						<th>Rank</th>
 					</tr>
 				</thead>
-				<tbody></tbody>
+				<tbody>
+					{this.state.users.map( data => {
+						return <Person person={data}></Person>;
+					})}
+				</tbody>
 			</table>
 		</div>)
 	}
